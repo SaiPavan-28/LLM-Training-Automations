@@ -118,6 +118,9 @@ summary and insights:
 
 ![alt text](<WhatsApp Image 2025-10-31 at 01.09.13_6f2e2476.jpg>)
 
+#TechStacks
+
+
 | Component     | Technology              |
 | :------------ | :---------------------- |
 | Frontend /UI  | Streamlit               |
