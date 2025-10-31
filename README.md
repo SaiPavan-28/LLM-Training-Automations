@@ -118,7 +118,7 @@ summary and insights:
 
 ![alt text](<news_summarizes_output.jpg>)
 
-#TechStacks
+# TechStacks
 
 
 | Component     | Technology              |
@@ -129,6 +129,8 @@ summary and insights:
 | Summarizer    | Google Gemini 2.5 Flash |
 | IDE           | Cursor                  |
 | Env Mgmt      | dotenv                  |
+
+
 
 
 # 🚀 Future Enhancements
