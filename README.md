@@ -21,10 +21,9 @@ Automatic fallbacks and handoffs if APIs fail.
 
 Clean, dark-mode Streamlit interface with contrasting text and visuals.
 
-🧱 Architecture Overview
 [User Input]
    │
-   ├── Input Guardrails (Validation, Token Limit)
+   ├── Input Guardrails (Validation + Token Limit)
    │
    ▼
 [News Fetching]
@@ -34,7 +33,7 @@ Clean, dark-mode Streamlit interface with contrasting text and visuals.
    │
    ▼
 [Gemini Summarizer]
-   ├── Multi-point Summary (≥10)
+   ├── Multi-point Summary (≥ 10)
    ├── Sentiment Analysis
    └── User Query Handling
    │
@@ -44,43 +43,40 @@ Clean, dark-mode Streamlit interface with contrasting text and visuals.
    ├── Output Sanitization
    └── Download Summary Option
 
-🧠 AI Model
-
-Google Gemini 2.5 Flash
-
-Performs summarization, analysis, and contextual Q&A.
-
-Returns neutral, concise, bullet-based insights.
-
-Operates under strict factual and anti-hallucination guardrails.
 
 🛡️ Guardrails Implemented
 #	Guardrail	Description
 1️⃣	Input Validation	Blocks special characters & unsafe inputs
+
 2️⃣	Query Length Control	Prevents long/spammy prompts
+
 3️⃣	Token Limit	Restricts text size to model-safe range
+
 4️⃣	Fallback Handling	Switches to general/global news or extractive summary
+
 5️⃣	Output Cleaning	Removes URLs, markup, and unsafe text
+
 6️⃣	Neutrality Enforcement	Gemini instructed to avoid political bias or speculation
+
 🔄 Handoffs Implemented
 
 Handoffs ensure graceful degradation when certain steps fail.
 
-Stage	Handoff Type	Purpose
-📰 NewsAPI	Regional → General → Global	Ensures some results always appear
-🧠 Gemini	Summarizer → Extractive Headlines	Prevents blank outputs if LLM fails
-🧩 Input	Invalid → Controlled Stop	Protects system from unsafe queries
-💬 Output	Raw → Sanitized	Keeps responses user-friendly and safe
-🧰 Development Tools Used
-Tool	Purpose
-Cursor	Used as the main AI-assisted IDE for coding, debugging, and LLM integration.
-Streamlit	For front-end web app development.
-Google Gemini API	For text summarization and analysis.
-NewsAPI	To fetch real-time categorized news data.
-Python-dotenv	For secure API key management.
-Regex + Custom Logic	For guardrails, input validation, and safety checks.
+| Stage                    | Handoff Type                      | Purpose                                  |
+| :----------------------- | :-------------------------------- | :--------------------------------------- |
+| 📰 **NewsAPI**           | Regional → General → Global       | Ensures some results always appear.      |
+| 🧠 **Gemini Summarizer** | Summarizer → Extractive Headlines | Prevents blank output if LLM fails.      |
+| 🧩 **Input**             | Invalid → Controlled Stop         | Protects the system from unsafe queries. |
+| 💬 **Output**            | Raw → Sanitized                   | Keeps responses safe and readable.       |
 
-🧑‍💻 Developed entirely using Cursor, leveraging its real-time AI coding and context-aware completions for seamless integration and debugging.
+| Tool                     | Purpose                                                          |
+| :----------------------- | :--------------------------------------------------------------- |
+| **Cursor**               | Main AI-assisted IDE for coding, debugging, and LLM integration. |
+| **Streamlit**            | Frontend framework for interactive web UI.                       |
+| **Google Gemini API**    | Performs text summarization and analysis.                        |
+| **NewsAPI**              | Fetches real-time categorized news data.                         |
+| **Python-dotenv**        | Manages API keys securely.                                       |
+| **Regex + Custom Logic** | Used for guardrails, input validation, and text cleaning.        |
 
 🎨 User Interface
 
@@ -100,7 +96,7 @@ Python ≥ 3.9
 Valid API keys for NewsAPI and Gemini
 
 2️⃣ Installation
-git clone https://github.com/<your-repo>/ai-news-summarizer
+git clone https://github.com/SaiPavan-28/LLM-Training-Automations.git
 cd ai-news-summarizer
 pip install -r requirements.txt
 
@@ -127,14 +123,27 @@ Sentiment: Neutral
 5. AI usage in healthcare continues to rise.
 ...
 
+![alt text](<WhatsApp Image 2025-10-31 at 01.08.30_0b30abec.jpg>)
+
+![alt text](<WhatsApp Image 2025-10-31 at 01.08.47_2f197877.jpg>)
+
+![alt text](<WhatsApp Image 2025-10-31 at 01.09.13_6f2e2476.jpg>)
+
 🧩 Tech Stack
-Component	Technology
-Frontend/UI	Streamlit
-Backend Logic	Python
-News Fetching	NewsAPI
-LLM Summarizer	Google Gemini 2.5 Flash
-IDE & Development	Cursor
-Security/Env Mgmt	dotenv
+| Component | Technology |
+
+| Frontend/UI |	Streamlit |
+
+| Backend Logic | Python |
+
+| News Fetching | NewsAPI|
+
+| LLM Summarizer | Google Gemini 2.5 Flash |
+
+| IDE & Development | Cursor |
+
+| Security/Env Mgmt | dotenv |
+
 🚀 Future Enhancements
 
 Add multi-language summarization using Gemini’s translation.
