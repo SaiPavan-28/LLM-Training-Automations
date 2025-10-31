@@ -110,13 +110,13 @@ Sentiment: Neutral
 5. AI usage in healthcare continues to rise.
 ...
 
-![alt text](<WhatsApp Image 2025-10-31 at 01.08.30_0b30abec.jpg>)
+![alt text](<UI_Interface of AI NEWS SUMMARIZER.jpg>)
 
 summary and insights:
 
-![alt text](<WhatsApp Image 2025-10-31 at 01.08.47_2f197877.jpg>)
+![alt text](<news_summary.jpg>)
 
-![alt text](<WhatsApp Image 2025-10-31 at 01.09.13_6f2e2476.jpg>)
+![alt text](<news_summarizes_output.jpg>)
 
 #TechStacks
 
