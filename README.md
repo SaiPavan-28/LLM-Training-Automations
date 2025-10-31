@@ -1,11 +1,13 @@
 # LLM-Training-Automations
-AI News Summarizer (Google Gemini + Streamlit + Guardrails)
+# AI News Summarizer (Google Gemini + Streamlit + Guardrails)
+
 
 An intelligent AI-powered news summarization system that fetches real-time headlines, applies safety guardrails, and uses Google Gemini to generate structured summaries and sentiment analysis.
 
 This project is built using Streamlit, NewsAPI, and Google Gemini 2.5 Flash, and was developed and debugged using Cursor AI code editor for efficient coding, automation, and LLM integration.
 
-🌟 Features
+# 🌟Features
+
 
 Fetches latest news by category and region.
 
@@ -21,27 +23,12 @@ Automatic fallbacks and handoffs if APIs fail.
 
 Clean, dark-mode Streamlit interface with contrasting text and visuals.
 
-[User Input]
-   │
-   ├── Input Guardrails (Validation + Token Limit)
-   │
-   ▼
-[News Fetching]
-   ├── Regional Headlines
-   ├── Fallback → General
-   └── Fallback → Global
-   │
-   ▼
-[Gemini Summarizer]
-   ├── Multi-point Summary (≥ 10)
-   ├── Sentiment Analysis
-   └── User Query Handling
-   │
-   ▼
-[Streamlit UI]
-   ├── Clean Display
-   ├── Output Sanitization
-   └── Download Summary Option
+
+# 🧱 Architecture Overview
+
+![alt text](image.png)
+
+
 
 
 🛡️ Guardrails Implemented
@@ -58,7 +45,7 @@ Clean, dark-mode Streamlit interface with contrasting text and visuals.
 
 6️⃣	Neutrality Enforcement	Gemini instructed to avoid political bias or speculation
 
-🔄 Handoffs Implemented
+# 🔄 Handoffs Implemented
 
 Handoffs ensure graceful degradation when certain steps fail.
 
@@ -78,7 +65,7 @@ Handoffs ensure graceful degradation when certain steps fail.
 | **Python-dotenv**        | Manages API keys securely.                                       |
 | **Regex + Custom Logic** | Used for guardrails, input validation, and text cleaning.        |
 
-🎨 User Interface
+# 🎨 User Interface
 
 Modern dark theme background (#0f172a)
 
@@ -88,7 +75,7 @@ Streamlit widgets for category, region, and user queries
 
 Displays both summarized insights and raw headlines
 
-⚙️ Setup
+# ⚙️ Setup
 1️⃣ Prerequisites
 
 Python ≥ 3.9
@@ -110,7 +97,7 @@ GEMINI_API_KEY=your_gemini_api_key
 4️⃣ Run the App
 streamlit run ai_news_summarizer_guarded.py
 
-📊 Example Output
+# 📊 Example Output
 
 Category: Technology
 Region: IN
@@ -125,26 +112,23 @@ Sentiment: Neutral
 
 ![alt text](<WhatsApp Image 2025-10-31 at 01.08.30_0b30abec.jpg>)
 
+summary and insights:
+
 ![alt text](<WhatsApp Image 2025-10-31 at 01.08.47_2f197877.jpg>)
 
 ![alt text](<WhatsApp Image 2025-10-31 at 01.09.13_6f2e2476.jpg>)
 
-🧩 Tech Stack
-| Component | Technology |
+| Component     | Technology              |
+| :------------ | :---------------------- |
+| Frontend /UI  | Streamlit               |
+| Backend Logic | Python                  |
+| News Fetch    | NewsAPI                 |
+| Summarizer    | Google Gemini 2.5 Flash |
+| IDE           | Cursor                  |
+| Env Mgmt      | dotenv                  |
 
-| Frontend/UI |	Streamlit |
 
-| Backend Logic | Python |
-
-| News Fetching | NewsAPI|
-
-| LLM Summarizer | Google Gemini 2.5 Flash |
-
-| IDE & Development | Cursor |
-
-| Security/Env Mgmt | dotenv |
-
-🚀 Future Enhancements
+# 🚀 Future Enhancements
 
 Add multi-language summarization using Gemini’s translation.
 
