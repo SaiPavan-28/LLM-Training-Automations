@@ -10,8 +10,8 @@ import time
 load_dotenv(override=True)
 
 # --- 2. API Keys ---
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyA_wx2UIzT0Qf9gi9hC9L8iHbiSvfAWHO4")
-NEWSAPI_KEY = os.getenv("NEWSAPI_KEY", "a22301d44da544f9a36ec32dcca92ece")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+NEWSAPI_KEY = os.getenv("NEWSAPI_KEY", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 
 # --- 3. Configure APIs ---
 genai.configure(api_key=GEMINI_API_KEY)
