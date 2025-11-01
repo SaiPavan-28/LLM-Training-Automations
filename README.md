@@ -30,6 +30,9 @@ Clean, dark-mode Streamlit interface with contrasting text and visuals.
 
 
 
+# WORKFLOW
+
+![alt text](image-2.png)
 
 🛡️ Guardrails Implemented
 #	Guardrail	Description
@@ -129,6 +132,22 @@ summary and insights:
 | Summarizer    | Google Gemini 2.5 Flash |
 | IDE           | Cursor                  |
 | Env Mgmt      | dotenv                  |
+
+
+# ACESS VEDIO RECORDING
+https://drive.google.com/file/d/1Ak4s84T24Le-YZz5RlX7bOmUf69VGWto/view?usp=drive_link
+
+
+## 📚 References
+
+1. [Google Gemini API Documentation](https://ai.google.dev/)
+2. [NewsAPI Documentation](https://newsapi.org/docs)
+3. [Streamlit Documentation](https://docs.streamlit.io/)
+4. [LangChain Framework](https://www.langchain.com/)
+5. [dotenv Python Library](https://pypi.org/project/python-dotenv/)
+6. Project idea inspired by real-time AI-powered news summarization tools.
+
+
 
 
 
