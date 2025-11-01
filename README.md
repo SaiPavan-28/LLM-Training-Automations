@@ -34,7 +34,7 @@ This project is built using Streamlit, NewsAPI, and Google Gemini 2.5 Flash, and
 
 # WORKFLOW
 
-![Workflow](Workflow.png)
+![Workflow](workflow_diagram.png)
 
 🛡️ Guardrails Implemented
 #	Guardrail	Description
