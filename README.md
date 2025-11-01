@@ -28,13 +28,13 @@ This project is built using Streamlit, NewsAPI, and Google Gemini 2.5 Flash, and
 
 # 🧱 Architecture Overview
 
-![alt text](image-1.png)
+![System Architecture](system_architecture.png)
 
 
 
 # WORKFLOW
 
-![alt text](image-2.png)
+![Workflow](Workflow.png)
 
 🛡️ Guardrails Implemented
 #	Guardrail	Description
@@ -137,16 +137,17 @@ Sentiment: Neutral
 5. AI usage in healthcare continues to rise.
 ...
 
-![alt text](UI OF NEWS SUMMARIZER.png)
-
+![alt text](UI_OF_NEWS_SUMMARIZER.png)
+  
 
 summary and insights:
 
-![alt text](Summary & Insights.png)
+![alt text](Summary_Insights.png)
 
-![alt text](credibility Report.png)
 
-![alt text](<credibility Report.png>)
+![alt text](credibility_Report.png)
+
+![alt text](news_links_images.png)
 
 
 
