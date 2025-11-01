@@ -26,7 +26,7 @@ Clean, dark-mode Streamlit interface with contrasting text and visuals.
 
 # 🧱 Architecture Overview
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 
 
