@@ -9,21 +9,21 @@ This project is built using Streamlit, NewsAPI, and Google Gemini 2.5 Flash, and
 # 🌟Features
 
 
-Fetches real-time news from 7 countries (US, IN, UK, CA, AU, DE, FR). category and region.
+* Fetches real-time news from 7 countries (US, IN, UK, CA, AU, DE, FR). category and region.
 
-Allows custom user queries for specific insights.
+* Allows custom user queries for specific insights.
 
-Summarizes with Gemini 2.5 Flash, ensuring factual, neutral results.
+* Summarizes with Gemini 2.5 Flash, ensuring factual, neutral results.
 
-Runs Enhanced Fact-Checking Tool for credibility scoring.
+* Runs Enhanced Fact-Checking Tool for credibility scoring.
 
-Produces  key bullet points per summary.
+* Produces  key bullet points per summary.
 
-Uses 5+ AI safety guardrails for reliability and trustworthiness.
+* Uses 5+ AI safety guardrails for reliability and trustworthiness.
 
-Automatic fallbacks and handoffs if APIs fail.
+* Automatic fallbacks and handoffs if APIs fail.
 
-Clean, dark-mode Streamlit interface with contrasting text and visuals.
+* Clean, dark-mode Streamlit interface with contrasting text and visuals.
 
 
 # 🧱 Architecture Overview
@@ -61,7 +61,7 @@ Handoffs ensure graceful degradation when certain steps fail.
 
 3. **Gemini → Streamlit UI**: The summarized insights are handed off to Streamlit for display to the user.
 
-
+# TOOLS
 
 | Tool                     | Purpose                                                          |
 | :----------------------- | :--------------------------------------------------------------- |
@@ -73,9 +73,9 @@ Handoffs ensure graceful degradation when certain steps fail.
 | **Regex + Custom Logic** | Used for guardrails, input validation, and text cleaning.        |
 
 
-🧩 Enhanced Fact-Checking Tool (Main New Component)
+# 🧩 Enhanced Fact-Checking Tool (Main New Component)
 
-Actions Performed:
+<strong>Actions Performed:</strong>
 
 Extracts factual claims from Gemini’s output.
 
@@ -139,13 +139,16 @@ Sentiment: Neutral
 
 ![alt text](UI OF NEWS SUMMARIZER.png)
 
+
 summary and insights:
 
 ![alt text](Summary & Insights.png)
 
 ![alt text](credibility Report.png)
 
-![alt text](news links and images.png)
+![alt text](<credibility Report.png>)
+
+
 
 # TechStacks
 
