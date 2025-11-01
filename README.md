@@ -9,13 +9,15 @@ This project is built using Streamlit, NewsAPI, and Google Gemini 2.5 Flash, and
 # 🌟Features
 
 
-Fetches latest news by category and region.
+Fetches real-time news from 7 countries (US, IN, UK, CA, AU, DE, FR). category and region.
 
 Allows custom user queries for specific insights.
 
 Summarizes with Gemini 2.5 Flash, ensuring factual, neutral results.
 
-Produces 10+ key bullet points per summary.
+Runs Enhanced Fact-Checking Tool for credibility scoring.
+
+Produces  key bullet points per summary.
 
 Uses 5+ AI safety guardrails for reliability and trustworthiness.
 
@@ -52,12 +54,14 @@ Clean, dark-mode Streamlit interface with contrasting text and visuals.
 
 Handoffs ensure graceful degradation when certain steps fail.
 
-| Stage                    | Handoff Type                      | Purpose                                  |
-| :----------------------- | :-------------------------------- | :--------------------------------------- |
-| 📰 **NewsAPI**           | Regional → General → Global       | Ensures some results always appear.      |
-| 🧠 **Gemini Summarizer** | Summarizer → Extractive Headlines | Prevents blank output if LLM fails.      |
-| 🧩 **Input**             | Invalid → Controlled Stop         | Protects the system from unsafe queries. |
-| 💬 **Output**            | Raw → Sanitized                   | Keeps responses safe and readable.       |
+
+1. **Streamlit → NewsAPI**: User selections are handed off to NewsAPI for retrieving relevant articles.  
+
+2. **NewsAPI → Gemini LLM**: Retrieved news data is handed off to Gemini for summarization and sentiment analysis.  
+
+3. **Gemini → Streamlit UI**: The summarized insights are handed off to Streamlit for display to the user.
+
+
 
 | Tool                     | Purpose                                                          |
 | :----------------------- | :--------------------------------------------------------------- |
@@ -68,15 +72,35 @@ Handoffs ensure graceful degradation when certain steps fail.
 | **Python-dotenv**        | Manages API keys securely.                                       |
 | **Regex + Custom Logic** | Used for guardrails, input validation, and text cleaning.        |
 
+
+🧩 Enhanced Fact-Checking Tool (Main New Component)
+
+Actions Performed:
+
+Extracts factual claims from Gemini’s output.
+
+Verifies each claim via three independent methods:
+
+Article cross-checking
+
+Wikipedia REST API search
+
+Gemini-based “common knowledge” validation
+
+Calculates credibility score and generates a visual report.
+
+Displays verified, partially verified, or unverified claims in Streamlit.
+
+
 # 🎨 User Interface
 
-Modern dark theme background (#0f172a)
+M🖤 Dark theme (#0f172a) for contrast and clarity
 
-Contrasting text and buttons for readability
+📰 Interactive dropdowns for category and country
 
-Streamlit widgets for category, region, and user queries
+📊 Metrics for credibility score and verified claims
 
-Displays both summarized insights and raw headlines
+🧠 Separate panels for summary, sources, and fact-check results
 
 # ⚙️ Setup
 1️⃣ Prerequisites
@@ -113,13 +137,15 @@ Sentiment: Neutral
 5. AI usage in healthcare continues to rise.
 ...
 
-![alt text](<UI_Interface of AI NEWS SUMMARIZER.jpg>)
+![alt text](UI OF NEWS SUMMARIZER.png)
 
 summary and insights:
 
-![alt text](<news_summary.jpg>)
+![alt text](Summary & Insights.png)
 
-![alt text](<news_summarizes_output.jpg>)
+![alt text](credibility Report.png)
+
+![alt text](news links and images.png)
 
 # TechStacks
 
